@@ -7,7 +7,15 @@ import { GoogleGenAI } from "@google/genai";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+
+  origin: "https://code-editor-lian4.vercel.app",
+
+  methods: ["GET", "POST", "OPTIONS"],
+
+  allowedHeaders: ["Content-Type"]
+
+}));
 app.use(express.json());
 
 const server = http.createServer(app);
