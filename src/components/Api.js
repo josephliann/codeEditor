@@ -1,0 +1,29 @@
+import axios from "axios";
+
+const API = axios.create({
+  baseURL: "http://localhost:3000",
+});
+
+const compilerMap = {
+  javascript: "typescript-deno",
+
+  python: "python-3.14",
+
+  java: "openjdk-25",
+
+  cpp: "g++-15",
+
+  c: "gcc-15",
+};
+
+export const executeCode = async (language, sourceCode) => {
+  const response = await API.post("/run", {
+    compiler: compilerMap[language],
+
+    code: sourceCode,
+
+    input: "",
+  });
+
+  return response.data;
+};
