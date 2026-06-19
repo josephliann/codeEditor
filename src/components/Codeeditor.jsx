@@ -23,7 +23,7 @@ function CodeEditor() {
     setShowDebugger(true);
 
     try {
-      const response = await fetch("http://localhost:3000/debug", {
+      const response = await fetch("https://codeeditor-anwu.onrender.com/debug", {
         method: "POST",
 
         headers: {
