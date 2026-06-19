@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://https://codeeditor-anwu.onrender.com",
+  baseURL: ""http://https//codeeditor-anwu.onrender.com/run"",
 });
 
 const compilerMap = {
