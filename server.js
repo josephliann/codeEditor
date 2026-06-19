@@ -9,7 +9,17 @@ dotenv.config();
 const app = express();
 app.use(cors({
 
-  origin: "https://code-editor-lian4.vercel.app",
+  origin: [
+
+    "https://code-editor-lian4.vercel.app",
+
+    "https://code-editor-git-main-lian4.vercel.app",
+
+    "http://localhost:3000",
+
+    "http://localhost:3001"
+
+  ],
 
   methods: ["GET", "POST", "OPTIONS"],
 
